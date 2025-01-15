@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            padding: 1rem;
+            gap: 2rem;
+        }
+
+        section {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        article {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        article h2 {
+            margin-bottom: 1rem;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #e9e9e9;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        aside img {
+            width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Berita Teknologi Terkini</h1>
+        <nav>
+            <a href="#" class="nav-link">Beranda</a>
+            <a href="#" class="nav-link">Artikel</a>
+            <a href="#" class="nav-link">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h2>Perkembangan AI di Indonesia</h2>
+                <p>Artificial Intelligence (AI) semakin berkembang pesat di Indonesia. Berbagai startup dan perusahaan teknologi mulai mengadopsi teknologi AI untuk meningkatkan efisiensi bisnis mereka.</p>
+                <p>Implementasi AI mencakup berbagai sektor, mulai dari pertanian hingga kesehatan. Para ahli memprediksi bahwa adopsi AI akan terus meningkat dalam beberapa tahun ke depan.</p>
+            </article>
+            <article>
+                <h2>Tren Teknologi 2025</h2>
+                <p>Beberapa tren teknologi yang diprediksi akan mendominasi tahun 2025 termasuk Metaverse, Quantum Computing, dan Green Technology.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Teknologi Populer</h3>
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&auto=format&fit=crop&q=60" alt="Ilustrasi teknologi AI">
+            <p>AI dan Machine Learning tetap menjadi teknologi paling populer di kalangan developer Indonesia.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; Doritoz News</p>
+        <p>Hubungi kami: info@doritoznews.com</p>
+    </footer>
+</body>
+</html>
